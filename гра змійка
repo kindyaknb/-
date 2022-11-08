@@ -14,7 +14,7 @@ void setup() {
  x = width / 2;
  y = height / 2;
  fruitX = rand() % width;
- fruitX = rand() % height;
+ fruitY = rand() % height;
  score = 0;
 }
 void Draw() {
@@ -27,6 +27,10 @@ void Draw() {
     for (int j = 0; j < width; j++) {
      if (j == 0 || j == width - 1)
       cout << "#";
+     if(i == y && j == x)
+      cout << "0"
+     else if (i== fruitY && j == fruitX)
+      cout << "0";
      cout << " ";
     }
     cout << endl;
@@ -37,7 +41,6 @@ void Draw() {
     cout << endl;
 }
 void Input() {
-
 }
 void Logic() {
 
